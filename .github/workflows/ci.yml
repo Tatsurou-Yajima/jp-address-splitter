@@ -47,4 +47,4 @@ jobs:
         run: composer cs-check
 
       - name: Run PHP CodeSniffer
-        run: composer phpcs
+        run: composer phpcs src/ tests/

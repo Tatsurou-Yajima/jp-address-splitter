@@ -90,14 +90,6 @@ class AddressSplitterTest extends TestCase
         $this->assertSame($prefecture, $result['prefecture'], "Failed for prefecture: {$prefecture}");
     }
 
-    /**
-     * 意図的に失敗するテスト（CI検証用）
-     */
-    public function testIntentionallyFailingTest(): void
-    {
-        $this->assertSame('expected', 'actual', 'This test is designed to fail for CI verification');
-    }
-
     public static function allPrefecturesProvider(): array
     {
         $prefectures = [

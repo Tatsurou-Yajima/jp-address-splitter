@@ -1,8 +1,14 @@
 {
     "name": "yajima-tatsuro/jp-address-splitter",
-    "description": "日本の住所文字列を都道府県とそれ以降に分割するPHPパッケージ",
+    "description": "日本の住所文字列を都道府県、市区町村、それ以降に分割するPHPパッケージ",
     "type": "library",
     "license": "MIT",
+    "keywords": ["japan", "address", "splitter", "prefecture", "city", "php"],
+    "homepage": "https://github.com/Tatsurou-Yajima/jp-address-splitter",
+    "support": {
+        "issues": "https://github.com/Tatsurou-Yajima/jp-address-splitter/issues",
+        "source": "https://github.com/Tatsurou-Yajima/jp-address-splitter"
+    },
     "authors": [
         {
             "name": "yajima-tatsuro",

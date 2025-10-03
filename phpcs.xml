@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<ruleset name="JP Address Splitter">
+    <description>PSR12 compliant rules for JP Address Splitter</description>
+
+    <arg name="extensions" value="php" />
+
+    <!-- 適用コーディング規約の指定 -->
+    <rule ref="PSR12" />
+
+    <!-- 出力に色を適用 -->
+    <arg name="colors" />
+
+    <!-- オプション p:進捗表示  s:エラー表示時にルールを表示 -->
+    <arg value="ps" />
+
+    <!-- 除外ディレクトリ -->
+    <exclude-pattern>/vendor/</exclude-pattern>
+    <exclude-pattern>/.phpunit.cache/</exclude-pattern>
+
+    <!-- 行の長さ制限を緩和 -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="140"/>
+        </properties>
+    </rule>
+
+    <!-- 複雑度制限を緩和 -->
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
+        <properties>
+            <property name="complexity" value="15"/>
+        </properties>
+    </rule>
+
+    <!-- テストファイルのメソッド名制限を除外 -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>/tests/</exclude-pattern>
+    </rule>
+
+    <!-- 長い条件文のコメント要求を除外 -->
+    <rule ref="Squiz.Commenting.LongConditionClosingComment">
+        <exclude-pattern>/src/</exclude-pattern>
+    </rule>
+
+    <!-- インラインコメントの句読点要求を無効化 -->
+    <rule ref="Squiz.Commenting.InlineComment">
+        <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+    </rule>
+</ruleset>
